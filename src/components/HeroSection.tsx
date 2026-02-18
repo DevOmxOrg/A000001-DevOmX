@@ -3,7 +3,7 @@ import { ArrowUpRight, Star } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center hero-gradient pt-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center hero-gradient pt-24 overflow-hidden">
       {/* Subtle decorative circles */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-accent/8 blur-3xl animate-float" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-accent/5 blur-3xl animate-float" style={{ animationDelay: "2s" }} />

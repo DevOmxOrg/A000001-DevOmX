@@ -11,18 +11,23 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 bg-secondary/50">
+    <section id="services" className="py-24 bg-background">
       <div className="container">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
+          className="text-center mb-16"
         >
-          Where innovation meets aesthetics
-        </motion.h2>
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20">
+            Our Services
+          </span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground">
+            Where innovation meets aesthetics
+          </h2>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -30,12 +35,12 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-accent/40 hover:glow-lime transition-all duration-300 cursor-default"
+              className="group p-7 rounded-2xl bg-card border border-border hover:shadow-lg hover:border-foreground/20 transition-all duration-300 cursor-default"
             >
-              <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
-                <service.icon size={22} />
+              <div className="w-11 h-11 rounded-xl bg-secondary flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                <service.icon size={20} />
               </div>
-              <h3 className="mt-5 text-lg font-display font-bold text-foreground">{service.title}</h3>
+              <h3 className="mt-5 text-base font-display font-bold text-foreground">{service.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
@@ -45,11 +50,11 @@ const ServicesSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
-            className="p-8 rounded-2xl bg-primary text-primary-foreground flex flex-col justify-between"
+            className="p-7 rounded-2xl bg-primary text-primary-foreground flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-lg font-display font-bold">See Our Work in Action.</h3>
-              <p className="mt-2 text-sm opacity-80">Start your creative journey with us!</p>
+              <h3 className="text-base font-display font-bold">See Our Work in Action.</h3>
+              <p className="mt-2 text-sm opacity-70">Start your creative journey with us!</p>
             </div>
             <div className="flex gap-3 mt-6">
               <a href="#contact" className="px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-medium hover:opacity-90 transition-opacity">

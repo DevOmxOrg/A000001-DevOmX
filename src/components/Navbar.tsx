@@ -8,55 +8,57 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/80 backdrop-blur-md border-b border-white/10">
-      <div className="container flex items-center justify-between h-16">
-        <a href="#" className="text-xl font-display font-bold tracking-tight text-primary-foreground">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4">
+      {/* Floating pill navbar */}
+      <div className="w-full max-w-3xl bg-white/90 backdrop-blur-md border border-border rounded-full shadow-md px-4 h-14 flex items-center justify-between">
+        <a href="#" className="text-lg font-display font-bold tracking-tight text-foreground ml-2">
           Dev<span className="text-accent">Om</span>X
         </a>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <a
               key={link}
               href={`#${link.toLowerCase()}`}
-              className="text-sm font-medium text-white/60 hover:text-white transition-colors"
+              className="text-sm font-medium text-foreground/60 hover:text-foreground transition-colors"
             >
               {link}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Get Started
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="rotate-45">
+            <svg width="13" height="13" viewBox="0 0 14 14" fill="none" className="rotate-45">
               <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </a>
         </div>
 
-        <button className="md:hidden text-white/80" onClick={() => setOpen(!open)}>
-          {open ? <X size={24} /> : <Menu size={24} />}
+        <button className="md:hidden text-foreground/70" onClick={() => setOpen(!open)}>
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="md:hidden overflow-hidden bg-primary border-b border-white/10"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute top-20 left-4 right-4 bg-white/95 backdrop-blur-md border border-border rounded-2xl shadow-lg overflow-hidden"
           >
-            <nav className="flex flex-col gap-4 p-6">
+            <nav className="flex flex-col gap-1 p-4">
               {navLinks.map((link) => (
                 <a
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="text-base font-medium text-white/60 hover:text-white"
+                  className="text-base font-medium text-foreground/70 hover:text-foreground px-4 py-2.5 rounded-xl hover:bg-secondary transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   {link}
@@ -64,7 +66,7 @@ const Navbar = () => {
               ))}
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-accent text-accent-foreground text-sm font-medium"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium mt-2"
                 onClick={() => setOpen(false)}
               >
                 Get Started
