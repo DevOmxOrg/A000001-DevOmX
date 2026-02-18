@@ -37,7 +37,7 @@
     --radius: 0.5rem;
 
     --hero-gradient: linear-gradient(160deg, hsl(210 17% 17%) 0%, hsl(210 11% 25%) 100%);
-    --glow-lime: 0 8px 40px -8px hsl(183 100% 35% / 0.35);
+    --glow-teal: 0 8px 40px -8px hsl(183 100% 35% / 0.35);
 
     --sidebar-background: 0 0% 93%;
     --sidebar-foreground: 210 17% 17%;
@@ -102,8 +102,8 @@
     background: var(--hero-gradient);
   }
 
-  .glow-lime {
-    box-shadow: var(--glow-lime);
+  .glow-teal {
+    box-shadow: var(--glow-teal);
   }
 
   .marquee {
