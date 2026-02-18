@@ -19,7 +19,7 @@ const PortfolioSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold text-foreground text-center"
+          className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
           How we transformed brands' online presence
         </motion.h2>
@@ -42,7 +42,7 @@ const PortfolioSection = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-serif font-bold text-foreground">{project.title}</h3>
+                <h3 className="text-xl font-display font-bold text-foreground">{project.title}</h3>
                 <div className="flex gap-2 mt-3">
                   {project.tags.map((tag) => (
                     <span

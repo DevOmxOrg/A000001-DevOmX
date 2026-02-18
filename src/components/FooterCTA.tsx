@@ -9,7 +9,7 @@ const FooterCTA = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold"
+          className="text-3xl md:text-5xl font-display font-bold"
         >
           Innovative solutions for bold brands
         </motion.h2>
@@ -36,7 +36,7 @@ const FooterCTA = () => {
       </div>
 
       <div className="container mt-20 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm font-serif font-bold tracking-tight">
+        <p className="text-sm font-display font-bold tracking-tight">
           Dev<span className="text-accent">Om</span>X
         </p>
         <div className="flex gap-6">

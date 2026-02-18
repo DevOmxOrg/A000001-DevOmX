@@ -26,7 +26,7 @@ const PricingSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold text-foreground text-center"
+          className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
           Pick the plan that fits your startup
         </motion.h2>
@@ -47,7 +47,7 @@ const PricingSection = () => {
             >
               <p className={`text-sm font-medium ${plan.highlight ? "text-accent" : "text-accent"}`}>{plan.name}</p>
               <p className={`mt-2 text-sm ${plan.highlight ? "opacity-80" : "text-muted-foreground"}`}>{plan.desc}</p>
-              <p className="mt-6 text-4xl font-serif font-bold">{plan.price}<span className="text-base font-sans font-normal opacity-60">/month</span></p>
+              <p className="mt-6 text-4xl font-display font-bold">{plan.price}<span className="text-base font-sans font-normal opacity-60">/month</span></p>
 
               <a
                 href="#contact"

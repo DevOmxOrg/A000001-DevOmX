@@ -17,7 +17,7 @@ const ServicesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold text-foreground text-center"
+          className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
           Where innovation meets aesthetics
         </motion.h2>
@@ -30,12 +30,12 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-accent/40 hover:glow-amber transition-all duration-300 cursor-default"
+              className="group p-8 rounded-2xl bg-card border border-border hover:border-accent/40 hover:glow-lime transition-all duration-300 cursor-default"
             >
               <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-accent-foreground transition-colors duration-300">
                 <service.icon size={22} />
               </div>
-              <h3 className="mt-5 text-lg font-serif font-bold text-foreground">{service.title}</h3>
+              <h3 className="mt-5 text-lg font-display font-bold text-foreground">{service.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
@@ -48,7 +48,7 @@ const ServicesSection = () => {
             className="p-8 rounded-2xl bg-primary text-primary-foreground flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-lg font-serif font-bold">See Our Work in Action.</h3>
+              <h3 className="text-lg font-display font-bold">See Our Work in Action.</h3>
               <p className="mt-2 text-sm opacity-80">Start your creative journey with us!</p>
             </div>
             <div className="flex gap-3 mt-6">

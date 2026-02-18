@@ -16,7 +16,7 @@ const StatsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold text-foreground max-w-3xl mx-auto leading-tight"
+          className="text-3xl md:text-5xl font-display font-bold text-foreground max-w-3xl mx-auto leading-tight"
         >
           Crafting exceptional, technology driven strategies to drive impactful results with
         </motion.h2>
@@ -42,7 +42,7 @@ const StatsSection = () => {
               transition={{ delay: i * 0.15 }}
               className="text-center"
             >
-              <p className="text-5xl md:text-6xl font-serif font-bold text-foreground">{stat.value}</p>
+              <p className="text-5xl md:text-6xl font-display font-bold text-foreground">{stat.value}</p>
               <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
             </motion.div>
           ))}
