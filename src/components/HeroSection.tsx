@@ -45,7 +45,7 @@ const HeroSection = () => {
         >
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity glow-lime"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity glow-teal"
           >
             Get Started
             <ArrowUpRight size={16} />
