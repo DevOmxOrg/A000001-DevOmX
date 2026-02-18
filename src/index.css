@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,38 +6,38 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 220 20% 10%;
+    --background: 0 0% 97%;
+    --foreground: 220 15% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card-foreground: 220 15% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 220 15% 8%;
 
-    --primary: 220 20% 10%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 220 15% 8%;
+    --primary-foreground: 75 100% 80%;
 
-    --secondary: 38 60% 95%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 220 10% 93%;
+    --secondary-foreground: 220 15% 8%;
 
-    --muted: 220 10% 94%;
-    --muted-foreground: 220 10% 46%;
+    --muted: 220 8% 92%;
+    --muted-foreground: 220 8% 48%;
 
-    --accent: 36 90% 55%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 75 95% 52%;
+    --accent-foreground: 220 15% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 90%;
-    --input: 220 10% 90%;
-    --ring: 36 90% 55%;
+    --border: 220 8% 88%;
+    --input: 220 8% 88%;
+    --ring: 75 95% 52%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(40 50% 96%) 0%, hsl(36 60% 94%) 50%, hsl(40 33% 98%) 100%);
-    --glow-amber: 0 8px 32px -8px hsl(36 90% 55% / 0.25);
+    --hero-gradient: linear-gradient(160deg, hsl(220 15% 8%) 0%, hsl(220 20% 12%) 100%);
+    --glow-lime: 0 8px 40px -8px hsl(75 95% 52% / 0.35);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -46,29 +46,29 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 75 95% 52%;
   }
 
   .dark {
-    --background: 220 20% 6%;
-    --foreground: 40 33% 98%;
-    --card: 220 20% 8%;
-    --card-foreground: 40 33% 98%;
-    --popover: 220 20% 8%;
-    --popover-foreground: 40 33% 98%;
-    --primary: 40 33% 98%;
-    --primary-foreground: 220 20% 10%;
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 40 33% 98%;
-    --muted: 220 15% 15%;
-    --muted-foreground: 220 10% 60%;
-    --accent: 36 90% 55%;
-    --accent-foreground: 220 20% 10%;
+    --background: 220 15% 6%;
+    --foreground: 0 0% 95%;
+    --card: 220 15% 9%;
+    --card-foreground: 0 0% 95%;
+    --popover: 220 15% 9%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 95%;
+    --primary-foreground: 220 15% 6%;
+    --secondary: 220 12% 14%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 12% 14%;
+    --muted-foreground: 220 8% 58%;
+    --accent: 75 95% 52%;
+    --accent-foreground: 220 15% 6%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 36 90% 55%;
+    --border: 220 12% 16%;
+    --input: 220 12% 16%;
+    --ring: 75 95% 52%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -76,7 +76,7 @@
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 75 95% 52%;
   }
 }
 
@@ -86,12 +86,14 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'DM Sans', sans-serif;
   }
 
-  h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
 }
 
@@ -100,8 +102,8 @@
     background: var(--hero-gradient);
   }
 
-  .glow-amber {
-    box-shadow: var(--glow-amber);
+  .glow-lime {
+    box-shadow: var(--glow-lime);
   }
 
   .marquee {

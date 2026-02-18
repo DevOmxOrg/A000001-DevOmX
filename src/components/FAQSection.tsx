@@ -17,7 +17,7 @@ const FAQSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold text-foreground text-center"
+          className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
           Got questions? We've got answers
         </motion.h2>

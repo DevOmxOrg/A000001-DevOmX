@@ -9,7 +9,7 @@ const TestimonialsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-serif font-bold text-foreground text-center"
+          className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
           What our satisfied customers are saying
         </motion.h2>
@@ -22,7 +22,7 @@ const TestimonialsSection = () => {
             className="p-8 rounded-2xl bg-card border border-border"
           >
             <Quote size={24} className="text-accent" />
-            <p className="mt-4 text-foreground font-serif text-lg font-medium leading-relaxed">
+            <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
               "DevOmX's expertise transformed my vision into a stunning reality!"
             </p>
             <div className="mt-6">
@@ -38,7 +38,7 @@ const TestimonialsSection = () => {
             transition={{ delay: 0.1 }}
             className="p-8 rounded-2xl bg-primary text-primary-foreground flex flex-col justify-center items-center text-center"
           >
-            <p className="text-6xl font-serif font-bold">91%</p>
+            <p className="text-6xl font-display font-bold">{`91%`}</p>
             <p className="mt-2 text-sm opacity-80">Clients recommend our design services</p>
           </motion.div>
 
@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
             className="p-8 rounded-2xl bg-card border border-border"
           >
             <Quote size={24} className="text-accent" />
-            <p className="mt-4 text-foreground font-serif text-lg font-medium leading-relaxed">
+            <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
               "Their creativity and attention to detail completely transformed our brand identity."
             </p>
             <div className="mt-6">
