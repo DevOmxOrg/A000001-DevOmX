@@ -98,6 +98,12 @@
 }
 
 @layer utilities {
+  .frosted-card {
+    @apply backdrop-blur-xl shadow-lg;
+    background-color: hsl(var(--card) / 0.58);
+    box-shadow: 0 12px 32px -20px hsl(var(--foreground) / 0.45);
+  }
+
   .hero-gradient {
     background: var(--hero-gradient);
   }

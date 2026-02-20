@@ -19,7 +19,7 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-card border border-border"
+            className="frosted-card p-8 rounded-2xl"
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-2xl bg-primary text-primary-foreground flex flex-col justify-center items-center text-center"
+            className="frosted-card p-8 rounded-2xl bg-primary/75 text-foreground flex flex-col justify-center items-center text-center"
           >
             <p className="text-6xl font-display font-bold">{`91%`}</p>
             <p className="mt-2 text-sm opacity-80">Clients recommend our design services</p>
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 rounded-2xl bg-card border border-border"
+            className="frosted-card p-8 rounded-2xl"
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">

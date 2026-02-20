@@ -9,7 +9,7 @@ const team = [
 
 const TeamSection = () => {
   return (
-    <section id="about" className="py-24 bg-secondary/50">
+    <section id="team" className="py-24 bg-secondary/50">
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ const TeamSection = () => {
               transition={{ delay: i * 0.1 }}
               className="text-center group w-48"
             >
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted border border-border group-hover:border-accent/40 transition-colors">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
                 <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
               </div>
               <h3 className="mt-4 font-semibold text-foreground font-sans text-sm">{member.name}</h3>

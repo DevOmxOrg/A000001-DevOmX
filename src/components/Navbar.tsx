@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
-const navLinks = ["About", "Services", "Work", "Pricing", "Contact"];
+const navLinks = ["Services", "Work", "Team", "Pricing", "Contact"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,8 +10,14 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4">
       {/* Floating pill navbar */}
-      <div className="w-full max-w-3xl bg-white/90 backdrop-blur-md border border-border rounded-full shadow-md px-4 h-14 flex items-center justify-between">
-        <a href="#" className="text-lg font-display font-bold tracking-tight text-foreground ml-2">
+      <div className="w-full max-w-3xl bg-white/90 backdrop-blur-md border border-border rounded-full shadow-md px-4 h-14 flex items-center justify-between md:grid md:grid-cols-[auto_auto_auto] md:justify-center md:gap-0">
+        <div className="hidden md:flex md:w-52 md:justify-end md:pr-[3.75rem]">
+          <a href="#" className="text-lg font-display font-bold tracking-tight text-foreground">
+            Dev<span className="text-accent">Om</span>X
+          </a>
+        </div>
+
+        <a href="#" className="text-lg font-display font-bold tracking-tight text-foreground md:hidden">
           Dev<span className="text-accent">Om</span>X
         </a>
 
@@ -27,10 +33,10 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex md:w-52 md:justify-start md:pl-[3.75rem]">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+            className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
           >
             Get Started
             <svg width="13" height="13" viewBox="0 0 14 14" fill="none" className="rotate-45">
@@ -66,7 +72,7 @@ const Navbar = () => {
               ))}
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium mt-2"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium mt-2"
                 onClick={() => setOpen(false)}
               >
                 Get Started

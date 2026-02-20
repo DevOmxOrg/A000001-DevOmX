@@ -39,10 +39,10 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className={`p-8 rounded-2xl border ${
+              className={`frosted-card p-8 rounded-2xl ${
                 plan.highlight
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-card text-foreground border-border"
+                  ? "bg-primary/75 text-foreground"
+                  : "text-foreground"
               }`}
             >
               <p className={`text-sm font-medium ${plan.highlight ? "text-accent" : "text-accent"}`}>{plan.name}</p>
