@@ -4,7 +4,7 @@ import teamOm from "@/assets/team-om.png";
 
 const team = [
   { img: teamDev, name: "Dev", role: "Director and Web Lead" },
-  { img: teamOm, name: "Om", role: "UX Designer" },
+  { img: teamOm, name: "Om", role: "Director and Content Lead" },
 ];
 
 const TeamSection = () => {
