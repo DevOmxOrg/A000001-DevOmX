@@ -1,14 +1,10 @@
 import { motion } from "framer-motion";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpg";
+import teamDev from "@/assets/team-dev.png";
+import teamOm from "@/assets/team-om.png";
 
 const team = [
-  { img: team1, name: "Marcus Chen", role: "Lead Developer" },
-  { img: team2, name: "Sofia Rivera", role: "UX Designer" },
-  { img: team3, name: "James Okafor", role: "Product Designer" },
-  { img: team4, name: "Elena Novak", role: "Brand Strategist" },
+  { img: teamDev, name: "Dev", role: "Lead Developer" },
+  { img: teamOm, name: "Om", role: "UX Designer" },
 ];
 
 const TeamSection = () => {
@@ -24,7 +20,7 @@ const TeamSection = () => {
           Meet the creative minds behind our success
         </motion.h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        <div className="flex justify-center gap-6 mt-16">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
@@ -32,7 +28,7 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center group"
+              className="text-center group w-48"
             >
               <div className="aspect-square rounded-2xl overflow-hidden bg-muted border border-border group-hover:border-accent/40 transition-colors">
                 <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
