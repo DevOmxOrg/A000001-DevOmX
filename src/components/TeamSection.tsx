@@ -3,7 +3,7 @@ import teamDev from "@/assets/team-dev.png";
 import teamOm from "@/assets/team-om.png";
 
 const team = [
-  { img: teamDev, name: "Dev", role: "Lead Developer" },
+  { img: teamDev, name: "Dev", role: "Director and Web Lead" },
   { img: teamOm, name: "Om", role: "UX Designer" },
 ];
 
