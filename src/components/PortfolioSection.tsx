@@ -5,7 +5,7 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const projects = [
-  { img: project1, title: "FlowDash", tags: ["UX Research", "Interface Design"] },
+  { img: project1, title: "Studio 28", tags: ["UX Research", "Interface Design"] },
   { img: project2, title: "Luxe Studio", tags: ["Product Design", "E-commerce"] },
   { img: project3, title: "FinTrack", tags: ["Brand Identity", "Mobile App"] },
   { img: project4, title: "NovaGroup", tags: ["Visual Identity", "Web Design"] },
