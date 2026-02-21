@@ -32,7 +32,7 @@ const PortfolioSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-2xl overflow-hidden border border-border bg-card hover:border-accent/40 transition-all duration-300"
+              className="group frosted-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
