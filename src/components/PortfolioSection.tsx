@@ -1,13 +1,11 @@
 // Original content of PortfolioSection.tsx
-
 import React from 'react';
 
 const PortfolioSection = () => {
     return (
-        <section>
+        <div>
             <h1>Portfolio</h1>
-            {/* Original portfolio content goes here */}
-        </section>
+        </div>
     );
 };
 
