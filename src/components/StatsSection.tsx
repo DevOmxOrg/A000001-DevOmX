@@ -6,7 +6,7 @@ const stats = [
   { value: "10+", label: "Design Awards" },
 ];
 
-const pillWords = ["Creativity", "Innovation", "Strategy"];
+const pillWords = ["Clarity", "Performance", "Conversion"];
 
 const StatsSection = () => {
   return (
@@ -18,7 +18,7 @@ const StatsSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground max-w-3xl mx-auto leading-tight"
         >
-          Crafting exceptional, technology driven strategies to drive impactful results with
+          Websites designed to look great, load fast, and convert
         </motion.h2>
 
         <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">

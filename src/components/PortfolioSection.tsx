@@ -5,10 +5,10 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const projects = [
-  { img: project1, title: "Studio 28", tags: ["UX Research", "Interface Design"] },
-  { img: project2, title: "Om's Plumbing", tags: ["Product Design", "E-commerce"] },
-  { img: project3, title: "STF Marketing", tags: ["Brand Identity", "Mobile App"] },
-  { img: project4, title: "Yogi's Yoga", tags: ["Visual Identity", "Web Design"] },
+  { img: project1, title: "Studio 28", tags: ["Website Design", "Responsive Build"] },
+  { img: project2, title: "Om's Plumbing", tags: ["Website Redesign", "Local Business Site"] },
+  { img: project3, title: "STF Marketing", tags: ["Landing Page", "Lead Generation"] },
+  { img: project4, title: "Yogi's Yoga", tags: ["Service Website", "Web Design"] },
 ];
 
 const PortfolioSection = () => {
@@ -21,7 +21,7 @@ const PortfolioSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          How we transformed brands' online presence
+          Website projects built for real business outcomes
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">

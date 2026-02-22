@@ -17,7 +17,7 @@ const TeamSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          Meet the creative minds behind our success
+          Meet the team building your next website
         </motion.h2>
 
         <div className="flex justify-center gap-6 mt-16">

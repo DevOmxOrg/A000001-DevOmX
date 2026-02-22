@@ -15,7 +15,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/30 bg-accent/10 text-accent text-xs font-semibold uppercase tracking-widest mb-8"
         >
-          Web Design & Development
+          Website Design Studio
         </motion.div>
 
         <motion.h1
@@ -24,8 +24,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.05] tracking-tight max-w-4xl mx-auto"
         >
-          Crafting digital experiences with{" "}
-          <em className="not-italic text-accent">purposeful design</em>
+          Websites that look sharp and{" "}
+          <em className="not-italic text-accent">bring in leads</em>
         </motion.h1>
 
         <motion.p
@@ -34,7 +34,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed"
         >
-          At DevOmX, we help ambitious brands stand out with tailored web design & development solutions, guiding you from concept to launch.
+          At DevOmX, we design and build clean, conversion-focused websites for service businesses, from first concept to launch.
         </motion.p>
 
         <motion.div
@@ -82,7 +82,7 @@ const HeroSection = () => {
               ))}
               <Star size={14} />
             </div>
-            <p className="text-xs text-white/50">Trusted by 500+ clients</p>
+            <p className="text-xs text-white/50">Trusted by local businesses and growing teams</p>
           </div>
         </motion.div>
       </div>

@@ -11,7 +11,7 @@ const FooterCTA = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold"
         >
-          Innovative solutions for bold brands
+          Need a website that looks good and performs?
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -20,7 +20,7 @@ const FooterCTA = () => {
           transition={{ delay: 0.1 }}
           className="mt-4 text-base opacity-70 max-w-lg mx-auto"
         >
-          Looking to elevate your brand? We craft immersive experiences that captivate, engage, and make your business unforgettable.
+          We design and build websites that help service businesses present clearly, build trust, and generate enquiries.
         </motion.p>
         <motion.a
           href="mailto:hello@devomx.com"
@@ -30,7 +30,7 @@ const FooterCTA = () => {
           transition={{ delay: 0.2 }}
           className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
         >
-          Start a Project
+          Start Your Website
           <ArrowUpRight size={16} />
         </motion.a>
       </div>

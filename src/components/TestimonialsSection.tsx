@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          What our satisfied customers are saying
+          What clients say about working with us
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
-              "Their creativity and attention to detail completely transformed our brand identity."
+              "Their design clarity and attention to detail completely transformed our website."
             </p>
             <div className="mt-6">
               <p className="font-semibold text-foreground text-sm">Raj Patel</p>

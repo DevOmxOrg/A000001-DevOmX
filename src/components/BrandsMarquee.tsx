@@ -4,7 +4,7 @@ const BrandsMarquee = () => {
   return (
     <section className="py-12 border-y border-border bg-background overflow-hidden">
       <p className="text-center text-sm text-muted-foreground mb-8">
-        Loved by 500+ big and small brands around the world
+        Built with trusted tools for modern websites
       </p>
       <div className="relative">
         <div className="flex marquee whitespace-nowrap">
