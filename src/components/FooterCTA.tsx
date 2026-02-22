@@ -35,11 +35,11 @@ const FooterCTA = () => {
         </motion.a>
       </div>
 
-      <div className="container mt-20 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="container relative mt-20 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm font-display font-bold tracking-tight">
           Dev<span className="text-accent">Om</span>X
         </p>
-        <div className="flex gap-6">
+        <div className="flex gap-6 md:absolute md:left-1/2 md:-translate-x-1/2">
           {["About", "Services", "Work", "Pricing"].map((link) => (
             <a key={link} href={`#${link.toLowerCase()}`} className="text-xs opacity-60 hover:opacity-100 transition-opacity">
               {link}
