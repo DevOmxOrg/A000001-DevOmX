@@ -6,7 +6,7 @@ const stats = [
   { value: "10+", label: "Design Awards" },
 ];
 
-const pillWords = ["Clarity", "Performance", "Conversion"];
+const pillWords = ["Clarity", "Trust", "Reputation"];
 
 const StatsSection = () => {
   return (
@@ -18,7 +18,7 @@ const StatsSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground max-w-3xl mx-auto leading-tight"
         >
-          Websites designed to look great, load fast, and convert
+          Websites designed to look great, load fast, and deliver
         </motion.h2>
 
         <div className="flex items-center justify-center gap-3 mt-6 flex-wrap">

@@ -80,7 +80,7 @@ const HeroSection = () => {
               {[1, 2, 3, 4].map((i) => (
                 <Star key={i} size={14} fill="currentColor" />
               ))}
-              <Star size={14} />
+              <Star size={14} fill="currentColor" />
             </div>
             <p className="text-xs text-white/50">Trusted by local businesses and growing teams</p>
           </div>
