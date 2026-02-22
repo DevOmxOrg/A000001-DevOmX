@@ -24,8 +24,8 @@ const HeroSection = () => {
           transition={{ duration: 0.7 }}
           className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.05] tracking-tight max-w-4xl mx-auto"
         >
-          Websites that look sharp and{" "}
-          <em className="not-italic text-accent">bring in leads</em>
+          Simply, we just make{" "}
+          <em className="not-italic text-accent">great websites</em>
         </motion.h1>
 
         <motion.p
