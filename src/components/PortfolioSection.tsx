@@ -21,7 +21,7 @@ const PortfolioSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          Website projects built for real business outcomes
+          Our work, built for growing businesses
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
