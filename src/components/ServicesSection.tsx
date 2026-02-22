@@ -37,7 +37,7 @@ const ServicesSection = () => {
               transition={{ delay: i * 0.1 }}
               className="group frosted-card p-7 rounded-2xl hover:shadow-xl transition-all duration-300 cursor-default"
             >
-              <div className="w-11 h-11 rounded-xl bg-secondary flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+              <div className="w-11 h-11 rounded-xl bg-secondary flex items-center justify-center text-white group-hover:bg-accent transition-colors duration-300">
                 <service.icon size={20} />
               </div>
               <h3 className="mt-5 text-base font-display font-bold text-foreground">{service.title}</h3>
