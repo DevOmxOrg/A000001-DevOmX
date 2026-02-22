@@ -28,10 +28,16 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center group w-48"
+              className="text-center group w-48 md:w-56"
             >
               <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover [image-rendering:auto]"
+                />
               </div>
               <h3 className="mt-4 font-semibold text-foreground font-sans text-sm">{member.name}</h3>
               <p className="text-xs text-muted-foreground">{member.role}</p>

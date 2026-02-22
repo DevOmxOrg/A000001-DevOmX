@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-4">
       {/* Floating pill navbar */}
-      <div className="w-full max-w-3xl bg-white/90 backdrop-blur-md border border-border rounded-full shadow-md px-4 h-14 flex items-center justify-between md:grid md:grid-cols-[auto_auto_auto] md:justify-center md:gap-0">
+      <div className="relative w-full max-w-3xl bg-white/90 backdrop-blur-md rounded-full shadow-md px-4 h-14 flex items-center justify-center md:grid md:grid-cols-[auto_auto_auto] md:justify-center md:gap-0">
         <div className="hidden md:flex md:w-52 md:justify-end md:pr-[3.75rem]">
           <a href="#" className="text-lg font-display font-bold tracking-tight text-foreground">
             Dev<span className="text-accent">Om</span>X
@@ -45,7 +45,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button className="md:hidden text-foreground/70" onClick={() => setOpen(!open)}>
+        <button className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 text-foreground/70" onClick={() => setOpen(!open)}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-20 left-4 right-4 bg-white/95 backdrop-blur-md border border-border rounded-2xl shadow-lg overflow-hidden"
+            className="absolute top-20 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg overflow-hidden"
           >
             <nav className="flex flex-col gap-1 p-4">
               {navLinks.map((link) => (
