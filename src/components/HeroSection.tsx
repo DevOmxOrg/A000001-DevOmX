@@ -34,7 +34,7 @@ const HeroSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-base md:text-lg text-white/60 max-w-xl mx-auto leading-relaxed"
         >
-          At DevOmX, we design and build clean, conversion-focused websites for service businesses, from first concept to launch.
+          At DevOmX, we design and build clean, impactful websites for service businesses, from initial concept all the way to launch.
         </motion.p>
 
         <motion.div
