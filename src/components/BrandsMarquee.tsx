@@ -1,4 +1,4 @@
-const brands = ["Shopify", "Figma", "Webflow", "Notion", "Stripe", "Vercel", "Adobe", "Slack"];
+const brands = ["Shopify", "Netlify", "Github", "React", "Stripe", "AI", "Claude", "Codex", "Microsoft"];
 
 const BrandsMarquee = () => {
   return (
