@@ -23,7 +23,7 @@ const FooterCTA = () => {
           We design and build websites that help service businesses present clearly, build trust, and generate enquiries.
         </motion.p>
         <motion.a
-          href="mailto:hello@devomx.com"
+          href="mailto:info@devomx.com"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
