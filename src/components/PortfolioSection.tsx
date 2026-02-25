@@ -8,7 +8,7 @@ const projects = [
   { img: project1, title: "Studio 28", tags: ["Website Design", "Responsive Build"] },
   { img: project2, title: "RapidFlow Plumbing", tags: ["Website Redesign", "Local Business Site"] },
   { img: project3, title: "Parker and Lane Solicitors", tags: ["Landing Page", "Lead Generation"] },
-  { img: project4, title: "Yogi's Yoga", tags: ["Service Website", "Web Design"] },
+  { img: project4, title: "Yogis Yoga", tags: ["Service Website", "Web Design"] },
 ];
 
 const PortfolioSection = () => {
