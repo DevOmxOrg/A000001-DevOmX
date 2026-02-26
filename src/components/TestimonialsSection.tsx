@@ -23,7 +23,7 @@ const TestimonialsSection = () => {
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
-              "DevOmX's expertise transformed my vision into a stunning reality!"
+              "DevOmX handled all the confusing tech stuff for me, and their expertise transformed my vision into a stunning reality!."
             </p>
             <div className="mt-6">
               <p className="font-semibold text-foreground text-sm">Sarah Mitchell</p>
@@ -36,10 +36,16 @@ const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="frosted-card p-8 rounded-2xl bg-primary/75 text-foreground flex flex-col justify-center items-center text-center"
+            className="frosted-card p-8 rounded-2xl"
           >
-            <p className="text-6xl font-display font-bold">{`91%`}</p>
-            <p className="mt-2 text-sm opacity-80">Clients recommend our design services</p>
+            <Quote size={24} className="text-accent" />
+            <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
+              "Our old site was an outdated mess, but their design clarity and attention to detail completely transformed our website"
+            </p>
+            <div className="mt-6">
+              <p className="font-semibold text-foreground text-sm">James Jenkins</p>
+              <p className="text-xs text-muted-foreground">Owner of The Daily Grind Cafe</p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -51,7 +57,7 @@ const TestimonialsSection = () => {
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
-              "Their design clarity and attention to detail completely transformed our website."
+              "DevOmX built us a perfect, ready-to-launch website from scratch, making the whole process completely stress free!"
             </p>
             <div className="mt-6">
               <p className="font-semibold text-foreground text-sm">Raj Patel</p>
