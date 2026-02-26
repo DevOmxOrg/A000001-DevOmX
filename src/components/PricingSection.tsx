@@ -31,7 +31,7 @@ const PricingSection = () => {
           Pick the package that fits your website project
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -39,7 +39,7 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className={`frosted-card p-8 rounded-2xl text-center ${
+              className={`frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center ${
                 plan.highlight
                   ? "bg-primary/75 text-foreground"
                   : "text-foreground"
@@ -52,7 +52,7 @@ const PricingSection = () => {
               <a
                 href="#contact"
                 className={`mt-6 inline-flex w-full items-center justify-center px-5 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-90 ${
-                  plan.highlight
+                  (plan.highlight || plan.name === "Starter")
                     ? "bg-accent text-accent-foreground"
                     : "bg-primary text-primary-foreground"
                 }`}
@@ -73,6 +73,36 @@ const PricingSection = () => {
               </div>
             </motion.div>
           ))}
+
+          {/* Custom package placeholder - blank space to fill out */}
+          <motion.div
+            key="Custom"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: plans.length * 0.15 }}
+            className="frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center"
+          >
+            <p className="text-sm font-medium text-accent">Custom</p>
+            <p className="mt-2 text-sm text-muted-foreground">&nbsp;</p>
+            <p className="mt-6 text-4xl font-display font-bold">&nbsp;</p>
+
+            <a
+              href="#contact"
+              className="mt-6 inline-flex w-full items-center justify-center px-5 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-90 bg-accent text-accent-foreground"
+            >
+              Start Your Project
+            </a>
+
+            <div className="mt-8">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Features</p>
+              <ul className="mt-4 space-y-3">
+                <li className="flex items-center justify-center gap-3 text-sm">&nbsp;</li>
+                <li className="flex items-center justify-center gap-3 text-sm">&nbsp;</li>
+                <li className="flex items-center justify-center gap-3 text-sm">&nbsp;</li>
+              </ul>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

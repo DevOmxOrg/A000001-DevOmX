@@ -28,19 +28,22 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center group w-48 md:w-56"
+              className="frosted-card rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-300 text-center w-[288px] md:w-[335px]"
             >
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted">
+              <div className="aspect-square overflow-hidden hero-gradient">
                 <img
                   src={member.img}
                   alt={member.name}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-full object-cover [image-rendering:auto]"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 [image-rendering:auto]"
                 />
               </div>
-              <h3 className="mt-4 font-semibold text-foreground font-sans text-sm">{member.name}</h3>
-              <p className="text-xs text-muted-foreground">{member.role}</p>
+
+              <div className="p-6">
+                <h3 className="font-semibold text-foreground font-sans" style={{ fontSize: '115%' }}>{member.name}</h3>
+                <p className="text-xs mt-1" style={{ color: 'hsl(210 11% 20%)', fontSize: '115%' }}>{member.role}</p>
+              </div>
             </motion.div>
           ))}
         </div>
