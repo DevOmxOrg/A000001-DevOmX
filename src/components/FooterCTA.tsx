@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const FooterCTA = () => {
   return (
-    <section id="contact" className="py-24 bg-primary text-primary-foreground">
+    <section id="contact" className="py-24 bg-primary text-primary-foreground" style={{ fontSize: "110%" }}>
       <div className="container text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

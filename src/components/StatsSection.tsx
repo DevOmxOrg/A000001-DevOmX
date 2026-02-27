@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const stats = [
-  { value: "50+", label: "Projects Completed" },
-  { value: "8+", label: "Years of Experience" },
-  { value: "10+", label: "Design Awards" },
+  { value: "24/7", label: "Uptime Monitoring" },
+  { value: "100%", label: "In-House Development" },
+  { value: "2s", label: "Target Load Time" },
 ];
 
 const pillWords = ["Clarity", "Trust", "Reputation"];

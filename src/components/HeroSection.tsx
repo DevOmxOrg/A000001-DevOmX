@@ -65,24 +65,13 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.8 }}
           className="mt-16 flex items-center justify-center gap-3"
         >
-          <div className="flex -space-x-2">
-            {[1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="w-9 h-9 rounded-full bg-white/10 border-2 border-white/20 overflow-hidden"
-              >
-                <div className="w-full h-full bg-accent/20" />
-              </div>
-            ))}
-          </div>
-          <div className="text-left">
-            <div className="flex text-accent">
-              {[1, 2, 3, 4].map((i) => (
-                <Star key={i} size={14} fill="currentColor" />
+          <div className="flex flex-col items-center">
+            <div className="flex gap-1 text-accent justify-center">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star key={i} size={16} fill="currentColor" />
               ))}
-              <Star size={14} fill="currentColor" />
             </div>
-            <p className="text-xs text-white/50">Trusted by local businesses and growing teams</p>
+            <p className="text-xs text-white/50 mt-2 text-center">Trusted by local businesses and growing teams</p>
           </div>
         </motion.div>
       </div>
