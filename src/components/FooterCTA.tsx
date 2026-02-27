@@ -1,7 +1,31 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 const FooterCTA = () => {
+  const [submitted, setSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    address: "",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("New Contact Form Submission");
+    const body = encodeURIComponent(
+      `First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:info@devomx.com?subject=${subject}&body=${body}`;
+    setSubmitted(true);
+  };
+
   return (
     <section id="contact" className="py-24 bg-primary text-primary-foreground" style={{ fontSize: "110%" }}>
       <div className="container text-center">
@@ -22,17 +46,88 @@ const FooterCTA = () => {
         >
           We design and build websites that help service businesses present clearly, build trust, and generate enquiries.
         </motion.p>
-        <motion.a
-          href="mailto:info@devomx.com"
+
+        {/* Contact Form */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
+          className="mt-12 max-w-2xl mx-auto"
         >
-          Start Your Website
-          <ArrowUpRight size={16} />
-        </motion.a>
+          <div className="bg-secondary/20 backdrop-blur-md rounded-2xl p-8 text-left">
+            <h3 className="text-2xl font-display font-bold italic text-accent mb-6">Get In Touch</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/40 border border-white/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/40 border border-white/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/40 border border-white/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                />
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-lg bg-secondary/40 border border-white/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+                />
+              </div>
+              <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                value={formData.address}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg bg-accent/30 border border-accent/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
+              />
+              <textarea
+                name="message"
+                placeholder="Type your message here"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={4}
+                className="w-full px-4 py-3 rounded-lg bg-accent/30 border border-accent/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all resize-none"
+              />
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="px-10 py-3 rounded-full bg-accent text-accent-foreground text-sm font-semibold hover:opacity-90 transition-opacity"
+                >
+                  Submit
+                </button>
+              </div>
+              {submitted && (
+                <p className="text-accent text-sm font-medium mt-4">Thanks for submitting!</p>
+              )}
+            </form>
+          </div>
+        </motion.div>
       </div>
 
       <div className="container relative mt-20 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">

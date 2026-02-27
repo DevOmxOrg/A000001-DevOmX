@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const stats = [
   { value: "24/7", label: "Uptime Monitoring" },
   { value: "100%", label: "In-House Development" },
-  { value: "2s", label: "Target Load Time" },
+  { value: "<2s", label:  "Target Load Time" },
 ];
 
 const pillWords = ["Clarity", "Trust", "Reputation"];
@@ -43,7 +43,7 @@ const StatsSection = () => {
               className="text-center"
             >
               <p className="text-5xl md:text-6xl font-display font-bold text-foreground">{stat.value}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
+              <p className="text-sm text-muted-foreground">{stat.label}</p>
             </motion.div>
           ))}
         </div>
