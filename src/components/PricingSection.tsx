@@ -84,7 +84,7 @@ const PricingSection = () => {
             className="frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center"
           >
             <p className="text-sm font-medium text-accent">Custom</p>
-            <p className="mt-2 text-sm text-muted-foreground">For complex enterprises with unique, integrated, and high-volume needs.</p>
+            <p className="mt-2 text-sm text-muted-foreground">For complex businesses with unique, integrated, and high-volume needs.</p>
             <p className="mt-6 text-4xl font-display font-bold">Tailored Pricing</p>
 
             <a
@@ -99,11 +99,11 @@ const PricingSection = () => {
               <ul className="mt-4 space-y-3">
                 {[
                   "Comprehensive Digital Strategy",
-                  "Enterprise-Scale Architecture",
+                  "Business-Scale Architecture",
                   "Complex System Integrations",
                   "Dedicated Account Manager",
                   "Iterative Performance Scaling",
-                  "Advanced Security & Redundancy",
+                  "and more...",
                 ].map((feat) => (
                   <li key={feat} className="flex items-center justify-center gap-3 text-sm">
                     <Check size={16} className="text-accent" />
