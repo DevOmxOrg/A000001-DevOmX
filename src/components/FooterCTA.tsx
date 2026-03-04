@@ -8,7 +8,6 @@ const FooterCTA = () => {
     lastName: "",
     email: "",
     phone: "",
-    address: "",
     message: "",
   });
 
@@ -20,7 +19,7 @@ const FooterCTA = () => {
     e.preventDefault();
     const subject = encodeURIComponent("New Contact Form Submission");
     const body = encodeURIComponent(
-      `First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAddress: ${formData.address}\n\nMessage:\n${formData.message}`
+      `First Name: ${formData.firstName}\nLast Name: ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`
     );
     window.location.href = `mailto:info@devomx.com?subject=${subject}&body=${body}`;
     setSubmitted(true);
@@ -97,14 +96,7 @@ const FooterCTA = () => {
                   className="w-full px-4 py-3 rounded-lg bg-secondary/40 border border-white/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
                 />
               </div>
-              <input
-                type="text"
-                name="address"
-                placeholder="Address"
-                value={formData.address}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg bg-accent/30 border border-accent/30 text-primary-foreground placeholder:text-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all"
-              />
+              {/* Address removed */}
               <textarea
                 name="message"
                 placeholder="Type your message here"
