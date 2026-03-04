@@ -107,11 +107,11 @@ const PricingSection = () => {
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Features</p>
               <ul className="mt-4 space-y-3">
                 {[
-                  "Comprehensive Digital Strategy",
-                  "Business-Scale Architecture",
-                  "Complex System Integrations",
-                  "Dedicated Account Manager",
-                  "Iterative Performance Scaling",
+                  "E-Commerce Functionality",
+                  "Advanced Booking Systems",
+                  "Membership / Client Portals",
+                  "Custom Graphics/Videos",
+                  "Custom 3rd-Party Integrations",
                   "and more...",
                 ].map((feat) => (
                   <li key={feat} className="flex items-center justify-center gap-3 text-sm">
