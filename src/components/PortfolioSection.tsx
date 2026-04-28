@@ -8,7 +8,7 @@ const projects = [
   { img: project1, title: "Studio 28", tags: ["Website Design", "Responsive Build"] },
   { img: project2, title: "RapidFlow Plumbing", tags: ["Website Redesign", "Local Business Site"] },
   { img: project3, title: "Parker and Lane Solicitors", tags: ["Landing Page", "Lead Generation"] },
-  { img: project4, title: "Yogi's Yoga", tags: ["Service Website", "Web Design"] },
+  { img: project4, title: "Yogi's Yoga", tags: ["Service Website", "Web Design"], url: "https://yogisyoga.netlify.app" },
 ];
 
 const PortfolioSection = () => {
@@ -25,37 +25,52 @@ const PortfolioSection = () => {
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group frosted-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-display font-bold text-foreground">{project.title}</h3>
-                <div className="flex gap-2 mt-3">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+          {projects.map((project, i) => {
+            const card = (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group frosted-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-              </div>
-            </motion.div>
-          ))}
+                <div className="p-6">
+                  <h3 className="text-xl font-display font-bold text-foreground">{project.title}</h3>
+                  <div className="flex gap-2 mt-3">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            );
+
+            return project.url ? (
+              <a
+                key={project.title}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                {card}
+              </a>
+            ) : (
+              <div key={project.title}>{card}</div>
+            );
+          })}
         </div>
       </div>
     </section>
