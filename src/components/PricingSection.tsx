@@ -39,7 +39,7 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className={`frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center ${
+              className={`frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center flex flex-col h-full justify-between ${
                 plan.highlight
                   ? "bg-primary/75 text-foreground"
                   : "text-foreground"
@@ -47,8 +47,17 @@ const PricingSection = () => {
             >
               <p className={`text-sm font-medium ${plan.highlight ? "text-accent" : "text-accent"}`}>{plan.name}</p>
               <p className={`mt-2 text-sm ${plan.highlight ? "opacity-80" : "text-muted-foreground"}`}>{plan.desc}</p>
-              <p className="mt-6 text-4xl font-display font-bold">{(plan.name === "Starter" || plan.name === "Pro") ? "From " : ""}{plan.price}<span className="text-base font-sans font-normal opacity-60">/month</span></p>
-
+              <p className="mt-6 text-4xl font-display font-bold">
+                {(plan.name === "Starter" || plan.name === "Pro") ? (
+                  <span className="w-full inline-grid grid-cols-[1fr_auto_1fr] items-baseline text-center gap-2 leading-none">
+                    <span className="text-base font-sans font-normal opacity-60 lowercase text-right">from</span>
+                    <span className="mx-2">{plan.price}</span>
+                    <span className="text-base font-sans font-normal opacity-60 text-left">per month</span>
+                  </span>
+                ) : (
+                  <span className="">{plan.price}</span>
+                )}
+              </p>
               <a
                 href="#contact"
                 className={`mt-6 inline-flex w-full items-center justify-center px-5 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-90 ${
@@ -60,7 +69,7 @@ const PricingSection = () => {
                 Start Your Project
               </a>
 
-              <div className="mt-8">
+              <div className="mt-[28px]">
                 <p className={`text-xs font-medium uppercase tracking-wider ${plan.highlight ? "opacity-60" : "text-muted-foreground"}`}>Features</p>
                 <ul className="mt-4 space-y-3">
                   {plan.features.map((feature) => (
@@ -81,28 +90,28 @@ const PricingSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: plans.length * 0.15 }}
-            className="frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center"
+            className="frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center flex flex-col h-full justify-between"
           >
             <p className="text-sm font-medium text-accent">Custom</p>
             <p className="mt-2 text-sm text-muted-foreground">For complex businesses with unique, integrated, and high-volume needs.</p>
-            <p className="mt-6 text-4xl font-display font-bold">Tailored Pricing</p>
+            <p className="mt-6 text-[33.33px] font-display font-bold">Tailored Pricing</p>
 
             <a
               href="#contact"
               className="mt-6 inline-flex w-full items-center justify-center px-5 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-90 bg-accent text-accent-foreground"
             >
-              Start Your Project
+              Contact Us
             </a>
 
-            <div className="mt-8">
+            <div className="mt-[28px]">
               <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Features</p>
               <ul className="mt-4 space-y-3">
                 {[
-                  "Comprehensive Digital Strategy",
-                  "Business-Scale Architecture",
-                  "Complex System Integrations",
-                  "Dedicated Account Manager",
-                  "Iterative Performance Scaling",
+                  "E-Commerce Functionality",
+                  "Advanced Booking Systems",
+                  "Membership / Client Portals",
+                  "Custom Graphics/Videos",
+                  "Custom 3rd-Party Integrations",
                   "and more...",
                 ].map((feat) => (
                   <li key={feat} className="flex items-center justify-center gap-3 text-sm">
