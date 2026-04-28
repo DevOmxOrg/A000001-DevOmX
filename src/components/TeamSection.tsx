@@ -1,19 +1,15 @@
 import { motion } from "framer-motion";
-import team1 from "@/assets/team-1.jpg";
-import team2 from "@/assets/team-2.jpg";
-import team3 from "@/assets/team-3.jpg";
-import team4 from "@/assets/team-4.jpg";
+import teamDev from "@/assets/team-dev.png";
+import teamOm from "@/assets/team-om.png";
 
 const team = [
-  { img: team1, name: "Marcus Chen", role: "Lead Developer" },
-  { img: team2, name: "Sofia Rivera", role: "UX Designer" },
-  { img: team3, name: "James Okafor", role: "Product Designer" },
-  { img: team4, name: "Elena Novak", role: "Brand Strategist" },
+  { img: teamDev, name: "Dev", role: "Director and Web Lead" },
+  { img: teamOm, name: "Om", role: "Director and Content Lead" },
 ];
 
 const TeamSection = () => {
   return (
-    <section id="about" className="py-24 bg-secondary/50">
+    <section id="team" className="py-24 bg-secondary/50">
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -21,10 +17,10 @@ const TeamSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          Meet the creative minds behind our success
+          Meet the team building your next website
         </motion.h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        <div className="flex justify-center gap-6 mt-16">
           {team.map((member, i) => (
             <motion.div
               key={member.name}
@@ -32,13 +28,22 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="text-center group"
+              className="frosted-card rounded-2xl overflow-hidden group hover:shadow-xl transition-all duration-300 text-center w-[288px] md:w-[335px]"
             >
-              <div className="aspect-square rounded-2xl overflow-hidden bg-muted border border-border group-hover:border-accent/40 transition-colors">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover" />
+              <div className="aspect-square overflow-hidden hero-gradient">
+                <img
+                  src={member.img}
+                  alt={member.name}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 [image-rendering:auto]"
+                />
               </div>
-              <h3 className="mt-4 font-semibold text-foreground font-sans text-sm">{member.name}</h3>
-              <p className="text-xs text-muted-foreground">{member.role}</p>
+
+              <div className="p-6">
+                <h3 className="font-semibold text-foreground font-sans" style={{ fontSize: '115%' }}>{member.name}</h3>
+                <p className="text-xs mt-1" style={{ color: 'hsl(210 11% 20%)', fontSize: '115%' }}>{member.role}</p>
+              </div>
             </motion.div>
           ))}
         </div>

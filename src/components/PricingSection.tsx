@@ -4,16 +4,16 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    desc: "For companies who need design support. One request at a time.",
-    price: "$2,500",
-    features: ["Design Updates Every 2 Days", "Mid-level Designer", "SEO Optimization", "Monthly Analytics", "2x Calls Per Month", "License Free Assets"],
+    desc: "Ideal for small businesses that need a polished, high-performing website.",
+    price: "£20",
+    features: ["Up to 5 Pages", "Custom Website Design", "Responsive Development", "Basic On-Page SEO", "2 Revision Rounds", "Launch Support"],
     highlight: false,
   },
   {
     name: "Pro",
-    desc: "2x the speed. Great for an MVP, Web App, or complex problem.",
-    price: "$3,800",
-    features: ["Design Updates Daily", "Senior-level Designer", "AI Advisory Framework", "Full-service Creative Team", "4x Calls Per Month", "License Free Assets"],
+    desc: "Best for growing teams that need a larger, conversion-focused website.",
+    price: "£30",
+    features: ["Up to 10 Pages", "Priority Design + Build", "Landing Page Optimization", "Advanced On-Page SEO Setup", "4 Revision Rounds", "30 Days Post-Launch Support"],
     highlight: true,
   },
 ];
@@ -28,10 +28,10 @@ const PricingSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          Pick the plan that fits your startup
+          Pick the package that fits your website project
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -39,32 +39,41 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className={`p-8 rounded-2xl border ${
+              className={`frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center flex flex-col h-full justify-between ${
                 plan.highlight
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-card text-foreground border-border"
+                  ? "bg-primary/75 text-foreground"
+                  : "text-foreground"
               }`}
             >
               <p className={`text-sm font-medium ${plan.highlight ? "text-accent" : "text-accent"}`}>{plan.name}</p>
               <p className={`mt-2 text-sm ${plan.highlight ? "opacity-80" : "text-muted-foreground"}`}>{plan.desc}</p>
-              <p className="mt-6 text-4xl font-display font-bold">{plan.price}<span className="text-base font-sans font-normal opacity-60">/month</span></p>
-
+              <p className="mt-6 text-4xl font-display font-bold">
+                {(plan.name === "Starter" || plan.name === "Pro") ? (
+                  <span className="w-full inline-grid grid-cols-[1fr_auto_1fr] items-baseline text-center gap-2 leading-none">
+                    <span className="text-base font-sans font-normal opacity-60 lowercase text-right">from</span>
+                    <span className="mx-2">{plan.price}</span>
+                    <span className="text-base font-sans font-normal opacity-60 text-left">per month</span>
+                  </span>
+                ) : (
+                  <span className="">{plan.price}</span>
+                )}
+              </p>
               <a
                 href="#contact"
                 className={`mt-6 inline-flex w-full items-center justify-center px-5 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-90 ${
-                  plan.highlight
+                  (plan.highlight || plan.name === "Starter")
                     ? "bg-accent text-accent-foreground"
                     : "bg-primary text-primary-foreground"
                 }`}
               >
-                Let's Collaborate
+                Start Your Project
               </a>
 
-              <div className="mt-8">
+              <div className="mt-[28px]">
                 <p className={`text-xs font-medium uppercase tracking-wider ${plan.highlight ? "opacity-60" : "text-muted-foreground"}`}>Features</p>
                 <ul className="mt-4 space-y-3">
                   {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center gap-3 text-sm">
+                    <li key={feature} className="flex items-center justify-center gap-3 text-sm">
                       <Check size={16} className={plan.highlight ? "text-accent" : "text-accent"} />
                       {feature}
                     </li>
@@ -73,6 +82,46 @@ const PricingSection = () => {
               </div>
             </motion.div>
           ))}
+
+          {/* Custom package placeholder - blank space to fill out */}
+          <motion.div
+            key="Custom"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: plans.length * 0.15 }}
+            className="frosted-card p-8 rounded-2xl overflow-hidden group transform transition-all duration-300 hover:shadow-xl hover:scale-105 text-center flex flex-col h-full justify-between"
+          >
+            <p className="text-sm font-medium text-accent">Custom</p>
+            <p className="mt-2 text-sm text-muted-foreground">For complex businesses with unique, integrated, and high-volume needs.</p>
+            <p className="mt-6 text-[33.33px] font-display font-bold">Tailored Pricing</p>
+
+            <a
+              href="#contact"
+              className="mt-6 inline-flex w-full items-center justify-center px-5 py-3 rounded-full text-sm font-medium transition-opacity hover:opacity-90 bg-accent text-accent-foreground"
+            >
+              Contact Us
+            </a>
+
+            <div className="mt-[28px]">
+              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Features</p>
+              <ul className="mt-4 space-y-3">
+                {[
+                  "E-Commerce Functionality",
+                  "Advanced Booking Systems",
+                  "Membership / Client Portals",
+                  "Custom Graphics/Videos",
+                  "Custom 3rd-Party Integrations",
+                  "and more...",
+                ].map((feat) => (
+                  <li key={feat} className="flex items-center justify-center gap-3 text-sm">
+                    <Check size={16} className="text-accent" />
+                    {feat}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

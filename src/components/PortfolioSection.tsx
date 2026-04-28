@@ -5,10 +5,10 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 
 const projects = [
-  { img: project1, title: "FlowDash", tags: ["UX Research", "Interface Design"] },
-  { img: project2, title: "Luxe Studio", tags: ["Product Design", "E-commerce"] },
-  { img: project3, title: "FinTrack", tags: ["Brand Identity", "Mobile App"] },
-  { img: project4, title: "NovaGroup", tags: ["Visual Identity", "Web Design"] },
+  { img: project1, title: "Studio 28", tags: ["Website Design", "Responsive Build"] },
+  { img: project2, title: "RapidFlow Plumbing", tags: ["Website Redesign", "Local Business Site"] },
+  { img: project3, title: "Parker and Lane Solicitors", tags: ["Landing Page", "Lead Generation"] },
+  { img: project4, title: "Yogi's Yoga", tags: ["Service Website", "Web Design"] },
 ];
 
 const PortfolioSection = () => {
@@ -21,7 +21,7 @@ const PortfolioSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          How we transformed brands' online presence
+          Our work, built for growing businesses
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
@@ -32,7 +32,7 @@ const PortfolioSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-2xl overflow-hidden border border-border bg-card hover:border-accent/40 transition-all duration-300"
+              className="group frosted-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -47,7 +47,7 @@ const PortfolioSection = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 rounded-full text-xs font-medium bg-secondary text-muted-foreground"
+                      className="px-3 py-1 rounded-full text-xs font-medium bg-secondary/30 text-muted-foreground"
                     >
                       {tag}
                     </span>

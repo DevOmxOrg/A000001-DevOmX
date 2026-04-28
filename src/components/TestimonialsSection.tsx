@@ -11,7 +11,7 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
           className="text-3xl md:text-5xl font-display font-bold text-foreground text-center"
         >
-          What our satisfied customers are saying
+          What clients say about working with us
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
@@ -19,11 +19,11 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="p-8 rounded-2xl bg-card border border-border"
+            className="frosted-card p-8 rounded-2xl"
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
-              "DevOmX's expertise transformed my vision into a stunning reality!"
+              "DevOmX handled all the confusing tech stuff for me, and their expertise transformed my vision into a stunning reality!."
             </p>
             <div className="mt-6">
               <p className="font-semibold text-foreground text-sm">Sarah Mitchell</p>
@@ -36,10 +36,16 @@ const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-8 rounded-2xl bg-primary text-primary-foreground flex flex-col justify-center items-center text-center"
+            className="frosted-card p-8 rounded-2xl"
           >
-            <p className="text-6xl font-display font-bold">{`91%`}</p>
-            <p className="mt-2 text-sm opacity-80">Clients recommend our design services</p>
+            <Quote size={24} className="text-accent" />
+            <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
+              "Our old site was an outdated mess, but their design clarity and attention to detail completely transformed our website"
+            </p>
+            <div className="mt-6">
+              <p className="font-semibold text-foreground text-sm">James Jenkins</p>
+              <p className="text-xs text-muted-foreground">Owner of The Daily Grind Cafe</p>
+            </div>
           </motion.div>
 
           <motion.div
@@ -47,11 +53,11 @@ const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-8 rounded-2xl bg-card border border-border"
+            className="frosted-card p-8 rounded-2xl"
           >
             <Quote size={24} className="text-accent" />
             <p className="mt-4 text-foreground font-display text-lg font-medium leading-relaxed">
-              "Their creativity and attention to detail completely transformed our brand identity."
+              "DevOmX built us a perfect, ready-to-launch website from scratch, making the whole process completely stress free!"
             </p>
             <div className="mt-6">
               <p className="font-semibold text-foreground text-sm">Raj Patel</p>

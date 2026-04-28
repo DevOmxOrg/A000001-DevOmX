@@ -2,11 +2,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "What services does DevOmX offer?", a: "We offer brand strategy, UI/UX design, web development, digital marketing, and analytics — end-to-end digital solutions for modern businesses." },
-  { q: "How long does a typical project take?", a: "Most projects take 4–8 weeks depending on scope. We'll give you a clear timeline during our initial discovery call." },
-  { q: "How is pricing structured?", a: "We offer monthly retainer plans as well as project-based pricing. Check our pricing section or contact us for a custom quote." },
-  { q: "Do you offer ongoing support after project completion?", a: "Yes! We provide post-launch support and maintenance packages to ensure your product continues to perform at its best." },
-  { q: "How often will I receive updates on my project?", a: "Depending on your plan, you'll receive updates daily or every 2 days, plus regular strategy calls." },
+  { q: "What services does DevOmX offer?", a: "We focus on website design, redesigns, landing pages, responsive development, and basic on-page SEO setup." },
+  { q: "How long does a typical project take?", a: "Most website projects take 2–6 weeks depending on scope, content readiness, and revisions." },
+  { q: "How is pricing structured?", a: "We primarily work with fixed project packages. If your project is unique, we can provide a custom quote." },
+  { q: "Do you offer ongoing support after project completion?", a: "Yes. We offer post-launch support for updates, fixes, and ongoing website improvements." },
+  { q: "How often will I receive updates on my project?", a: "You can expect regular progress updates at each milestone, plus scheduled check-ins during the build." },
 ];
 
 const FAQSection = () => {
